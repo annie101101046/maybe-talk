@@ -1,70 +1,38 @@
 // Language switching
 let currentLang = 'zh';
 
-// Point a plan at checkout later by setting its url. Empty url keeps the mailto.
-const CHECKOUT_EMAIL = "hello@maybeshedliketotalk.org";
+// Single swap point for the three buy buttons. Overlay script binds these hrefs.
 const CHECKOUT = {
-  single: {
-    url: "",
-    zh: {
-      subject: "預購：單一孕期 US$15",
-      body: "你好，我想預購「單一孕期」（US$15）。\n\n姓名：\n預產期：\n想走的週數（1–12 / 13–27 / 28–40）：\n"
-    },
-    en: {
-      subject: "Pre-order: Single Trimester US$15",
-      body: "Hi, I'd like to pre-order Single Trimester (US$15).\n\nName:\nDue date:\nWeeks I'd like (1–12 / 13–27 / 28–40):\n"
-    }
-  },
-  full: {
-    url: "",
-    zh: {
-      subject: "預購：全孕期通行證 US$29",
-      body: "你好，我想預購「全孕期通行證」（早鳥 US$29）。\n\n姓名：\n預產期：\n"
-    },
-    en: {
-      subject: "Pre-order: Full Pregnancy Pass US$29",
-      body: "Hi, I'd like to pre-order the Full Pregnancy Pass (early bird US$29).\n\nName:\nDue date:\n"
-    }
-  },
-  gift: {
-    url: "",
-    zh: {
-      subject: "預購：送禮版 US$45",
-      body: "你好，我想預購「送禮版」（US$45）。\n\n姓名：\n預產期：\n"
-    },
-    en: {
-      subject: "Pre-order: Gift Edition US$45",
-      body: "Hi, I'd like to pre-order the Gift Edition (US$45).\n\nName:\nDue date:\n"
-    }
-  }
+  single: "https://kincode.gumroad.com/l/single-trimester",
+  full: "https://kincode.gumroad.com/l/full-pregnancy-pass",
+  gift: "https://kincode.gumroad.com/l/gift-edition"
 };
-
-function checkoutHref(plan, lang) {
-  const item = CHECKOUT[plan];
-  if (!item) return "mailto:" + CHECKOUT_EMAIL;
-  if (item.url) return item.url;
-  const copy = item[lang] || item.zh;
-  const params = new URLSearchParams({ subject: copy.subject, body: copy.body });
-  return "mailto:" + CHECKOUT_EMAIL + "?" + params.toString();
-}
 
 function applyCheckoutLinks() {
   document.querySelectorAll("[data-plan]").forEach(el => {
-    el.href = checkoutHref(el.dataset.plan, currentLang);
+    const url = CHECKOUT[el.dataset.plan];
+    if (url) el.href = url;
   });
 }
 
-function setLang(lang) {
-  currentLang = lang;
+function applyLang(lang) {
+  currentLang = lang === 'en' ? 'en' : 'zh';
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
+    btn.classList.toggle('active', btn.dataset.lang === currentLang);
   });
   document.querySelectorAll('.i18n').forEach(el => {
-    const text = el.getAttribute(`data-${lang}`);
+    const text = el.getAttribute(`data-${currentLang}`);
     if (text) el.textContent = text;
   });
-  document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
+  document.documentElement.lang = currentLang === 'zh' ? 'zh-Hant' : 'en';
+  document.documentElement.classList.remove('i18n-pending');
   applyCheckoutLinks();
+}
+
+function setLang(lang) {
+  var choice = lang === 'en' ? 'en' : 'zh';
+  try { localStorage.setItem('lang', choice); } catch (e) {}
+  applyLang(choice);
 }
 
 // Scroll animations
@@ -77,7 +45,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-applyCheckoutLinks();
+applyLang(window.__siteLang === 'en' ? 'en' : 'zh');
 
 // Nav scroll effect
 window.addEventListener('scroll', () => {

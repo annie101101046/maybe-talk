@@ -1,3 +1,4 @@
+html.i18n-pending body { visibility: hidden; }
 :root {
   /* Bold Headspace/Buck-inspired palette */
   --coral: #F28B6E;
@@ -515,6 +516,10 @@ section {
   white-space: normal;
   text-align: center;
   line-height: 1.4;
+}
+/* Gumroad's overlay script appends an empty logo span to product links. */
+.price-card .btn-primary > .logo-full {
+  display: none;
 }
 .pricing-currency {
   text-align: center;
