@@ -3,12 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>也許妳想找人聊一聊 | Maybe She'd Like to Talk</title>
-  <meta name="description" content="為孕期媽咪設計的完整 40 週互動旅程。每週情緒陪伴指南，加上呼吸與冥想練習。">
+  <script>
+    (function () {
+      var stored = null;
+      try { stored = localStorage.getItem("lang"); } catch (e) {}
+      var lang;
+      if (stored === "zh" || stored === "en") {
+        lang = stored;
+      } else {
+        var list = navigator.languages;
+        var first = list && list.length ? list[0] : "";
+        var tag = String(first || navigator.language || "");
+        lang = tag.toLowerCase().indexOf("zh") === 0 ? "zh" : (tag ? "en" : "zh");
+      }
+      document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
+      if (lang === "en") document.documentElement.classList.add("i18n-pending");
+      window.__siteLang = lang;
+    })();
+  </script>
+  <title>孕期冥想與情緒陪伴｜也許妳想找人聊一聊</title>
+  <meta name="description" content="懷孕時如果焦慮、情緒一直起伏，可以一週一週看。這裡有 40 週的孕期情緒陪伴，每週附冥想和呼吸練習。前 4 週免費。">
+  <link rel="canonical" href="https://www.maybeshedliketotalk.org/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.maybeshedliketotalk.org/">
+  <link rel="alternate" hreflang="x-default" href="https://www.maybeshedliketotalk.org/">
+  <meta name="theme-color" content="#F28B6E">
+  <meta property="og:title" content="也許妳想找人聊一聊｜40 週孕期情緒陪伴">
+  <meta property="og:description" content="懷孕時如果焦慮、情緒一直起伏，可以一週一週看。這裡有 40 週的孕期情緒陪伴，每週附冥想和呼吸練習。前 4 週免費。">
+  <meta property="og:image" content="https://www.maybeshedliketotalk.org/og-image.png">
+  <meta property="og:image:secure_url" content="https://www.maybeshedliketotalk.org/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="也許妳想找人聊一聊。40 週孕期旅程，每週陪妳看情緒，一起做冥想和呼吸。">
+  <meta property="og:url" content="https://www.maybeshedliketotalk.org/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="也許妳想找人聊一聊">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="也許妳想找人聊一聊｜40 週孕期情緒陪伴">
+  <meta name="twitter:description" content="懷孕時如果焦慮、情緒一直起伏，可以一週一週看。這裡有 40 週的孕期情緒陪伴，每週附冥想和呼吸練習。前 4 週免費。">
+  <meta name="twitter:image" content="https://www.maybeshedliketotalk.org/og-image.png">
+  <meta name="twitter:image:alt" content="也許妳想找人聊一聊。40 週孕期旅程，每週陪妳看情緒，一起做冥想和呼吸。">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="apple-mobile-web-app-title" content="也許妳想找人聊一聊">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.maybeshedliketotalk.org/#organization",
+        "name": "Maybe She'd Like to Talk",
+        "alternateName": "也許妳想找人聊一聊",
+        "url": "https://www.maybeshedliketotalk.org/",
+        "email": "hello@maybeshedliketotalk.org",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.maybeshedliketotalk.org/icon-512.png"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.maybeshedliketotalk.org/#website",
+        "url": "https://www.maybeshedliketotalk.org/",
+        "name": "也許妳想找人聊一聊",
+        "alternateName": "Maybe She'd Like to Talk",
+        "inLanguage": "zh-Hant",
+        "publisher": { "@id": "https://www.maybeshedliketotalk.org/#organization" }
+      },
+      {
+        "@type": "Product",
+        "name": "單一孕期",
+        "description": "適合孕期中途才加入。自選第 1–12、13–27 或 28–40 週，含該段的每週情緒陪伴、呼吸與冥想練習。",
+        "brand": { "@id": "https://www.maybeshedliketotalk.org/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "15",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://kincode.gumroad.com/l/single-trimester"
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "全孕期通行證",
+        "description": "全部 40 週的情緒陪伴，加上中英文呼吸與冥想語音。每週釋出，一次買斷、永久使用。",
+        "brand": { "@id": "https://www.maybeshedliketotalk.org/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "29",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://kincode.gumroad.com/l/full-pregnancy-pass",
+          "priceSpecification": [
+            {
+              "@type": "UnitPriceSpecification",
+              "price": "29",
+              "priceCurrency": "USD",
+              "priceType": "https://schema.org/SalePrice"
+            },
+            {
+              "@type": "UnitPriceSpecification",
+              "price": "39",
+              "priceCurrency": "USD",
+              "priceType": "https://schema.org/ListPrice"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "Product",
+        "name": "送禮版",
+        "description": "全孕期通行證，再加一份數位禮卡。送給伴侶、家人或朋友。",
+        "brand": { "@id": "https://www.maybeshedliketotalk.org/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "45",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/PreOrder",
+          "url": "https://kincode.gumroad.com/l/gift-edition"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "url": "https://www.maybeshedliketotalk.org/#pricing",
+        "inLanguage": "zh-Hant",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "內容什麼時候會釋出？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "每週釋出一週。完整的 40 週會分批上線，所以現在是預購。第 1–4 週可以先免費開始。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "孕期中途才加入，可以嗎？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "可以。單一孕期讓妳自選第 1–12、13–27 或 28–40 週。若想一次走完，選全孕期通行證。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "買了可以一直使用嗎？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "全孕期通行證是一次買斷、永久使用。送禮版包含同一張通行證。單一孕期則是妳所選的那一段週數。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "要怎麼付款？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "用信用卡或 PayPal，在 Gumroad 付款。每週的內容會寄到妳的信箱。其他問題寫到 hello@maybeshedliketotalk.org。"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <style>
+    html.i18n-pending body { visibility: hidden; }
     :root {
       /* Bold Headspace/Buck-inspired palette */
       --coral: #F28B6E;
@@ -527,6 +693,10 @@
       text-align: center;
       line-height: 1.4;
     }
+    /* Gumroad's overlay script appends an empty logo span to product links. */
+    .price-card .btn-primary > .logo-full {
+      display: none;
+    }
     .pricing-currency {
       text-align: center;
       font-size: 13px;
@@ -703,7 +873,7 @@
 
       <!-- Hero Illustration: Bold geometric pregnant figure (Buck/Headspace style) -->
       <div class="hero-illustration">
-        <svg viewBox="0 0 360 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 360 320" width="360" height="320" role="img" aria-label="坐著的孕期人物，背後有一顆黃色的圓。" fill="none" xmlns="http://www.w3.org/2000/svg">
           <!-- Yellow sun/glow circle behind -->
           <circle cx="180" cy="140" r="90" fill="#FFB627"/>
           <!-- Body: coral blob shape -->
@@ -852,7 +1022,7 @@
           <li data-zh="該段的每週情緒陪伴" data-en="Weekly emotional guide for those weeks" class="i18n">該段的每週情緒陪伴</li>
           <li data-zh="該段的呼吸與冥想練習" data-en="Breathing and meditation for those weeks" class="i18n">該段的呼吸與冥想練習</li>
         </ul>
-        <a class="btn-primary i18n" data-plan="single" href="mailto:hello@maybeshedliketotalk.org" data-zh="預購單一孕期" data-en="Pre-order this trimester">預購單一孕期</a>
+        <a class="btn-primary i18n" data-plan="single" href="https://kincode.gumroad.com/l/single-trimester" data-zh="立即購買" data-en="Buy now">立即購買</a>
       </article>
 
       <article class="price-card popular fade-in">
@@ -872,7 +1042,7 @@
           <li data-zh="每週釋出" data-en="Released weekly" class="i18n">每週釋出</li>
           <li data-zh="一次買斷，永久使用" data-en="One-time purchase, lifetime access" class="i18n">一次買斷，永久使用</li>
         </ul>
-        <a class="btn-primary i18n" data-plan="full" href="mailto:hello@maybeshedliketotalk.org" data-zh="以早鳥價預購" data-en="Pre-order at the early-bird price">以早鳥價預購</a>
+        <a class="btn-primary i18n" data-plan="full" href="https://kincode.gumroad.com/l/full-pregnancy-pass" data-zh="立即購買" data-en="Buy now">立即購買</a>
       </article>
 
       <article class="price-card fade-in">
@@ -889,7 +1059,7 @@
           <li data-zh="加一份數位禮卡，可以轉贈" data-en="Plus a digital gift card to pass on" class="i18n">加一份數位禮卡，可以轉贈</li>
           <li data-zh="送給伴侶、家人或朋友" data-en="For a partner, family, or friend" class="i18n">送給伴侶、家人或朋友</li>
         </ul>
-        <a class="btn-primary i18n" data-plan="gift" href="mailto:hello@maybeshedliketotalk.org" data-zh="預購送禮版" data-en="Pre-order the gift edition">預購送禮版</a>
+        <a class="btn-primary i18n" data-plan="gift" href="https://kincode.gumroad.com/l/gift-edition" data-zh="送給她" data-en="Send as a gift">送給她</a>
       </article>
     </div>
 
@@ -911,7 +1081,7 @@
       </div>
       <div class="faq-item">
         <h3 data-zh="要怎麼付款？" data-en="How do I pay?" class="i18n">要怎麼付款？</h3>
-        <p data-zh="線上結帳還沒有開放。點方案按鈕會寫信到 hello@maybeshedliketotalk.org，留下姓名和預產期，我們會回信跟妳完成預購。" data-en="Online checkout is not open yet. A plan button emails hello@maybeshedliketotalk.org. Leave your name and due date, and we will write back to finish the pre-order." class="i18n">線上結帳還沒有開放。點方案按鈕會寫信到 hello@maybeshedliketotalk.org，留下姓名和預產期，我們會回信跟妳完成預購。</p>
+        <p data-zh="用信用卡或 PayPal，在 Gumroad 付款。每週的內容會寄到妳的信箱。其他問題寫到 hello@maybeshedliketotalk.org。" data-en="Pay by card or PayPal on Gumroad. Each week's content is emailed to you. For anything else, write to hello@maybeshedliketotalk.org." class="i18n">用信用卡或 PayPal，在 Gumroad 付款。每週的內容會寄到妳的信箱。其他問題寫到 hello@maybeshedliketotalk.org。</p>
       </div>
     </div>
   </section>
@@ -934,70 +1104,38 @@
     // Language switching
     let currentLang = 'zh';
 
-    // Point a plan at checkout later by setting its url. Empty url keeps the mailto.
-    const CHECKOUT_EMAIL = "hello@maybeshedliketotalk.org";
+    // Single swap point for the three buy buttons. Overlay script binds these hrefs.
     const CHECKOUT = {
-      single: {
-        url: "",
-        zh: {
-          subject: "預購：單一孕期 US$15",
-          body: "你好，我想預購「單一孕期」（US$15）。\n\n姓名：\n預產期：\n想走的週數（1–12 / 13–27 / 28–40）：\n"
-        },
-        en: {
-          subject: "Pre-order: Single Trimester US$15",
-          body: "Hi, I'd like to pre-order Single Trimester (US$15).\n\nName:\nDue date:\nWeeks I'd like (1–12 / 13–27 / 28–40):\n"
-        }
-      },
-      full: {
-        url: "",
-        zh: {
-          subject: "預購：全孕期通行證 US$29",
-          body: "你好，我想預購「全孕期通行證」（早鳥 US$29）。\n\n姓名：\n預產期：\n"
-        },
-        en: {
-          subject: "Pre-order: Full Pregnancy Pass US$29",
-          body: "Hi, I'd like to pre-order the Full Pregnancy Pass (early bird US$29).\n\nName:\nDue date:\n"
-        }
-      },
-      gift: {
-        url: "",
-        zh: {
-          subject: "預購：送禮版 US$45",
-          body: "你好，我想預購「送禮版」（US$45）。\n\n姓名：\n預產期：\n"
-        },
-        en: {
-          subject: "Pre-order: Gift Edition US$45",
-          body: "Hi, I'd like to pre-order the Gift Edition (US$45).\n\nName:\nDue date:\n"
-        }
-      }
+      single: "https://kincode.gumroad.com/l/single-trimester",
+      full: "https://kincode.gumroad.com/l/full-pregnancy-pass",
+      gift: "https://kincode.gumroad.com/l/gift-edition"
     };
-
-    function checkoutHref(plan, lang) {
-      const item = CHECKOUT[plan];
-      if (!item) return "mailto:" + CHECKOUT_EMAIL;
-      if (item.url) return item.url;
-      const copy = item[lang] || item.zh;
-      const params = new URLSearchParams({ subject: copy.subject, body: copy.body });
-      return "mailto:" + CHECKOUT_EMAIL + "?" + params.toString();
-    }
 
     function applyCheckoutLinks() {
       document.querySelectorAll("[data-plan]").forEach(el => {
-        el.href = checkoutHref(el.dataset.plan, currentLang);
+        const url = CHECKOUT[el.dataset.plan];
+        if (url) el.href = url;
       });
     }
 
-    function setLang(lang) {
-      currentLang = lang;
+    function applyLang(lang) {
+      currentLang = lang === 'en' ? 'en' : 'zh';
       document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
+        btn.classList.toggle('active', btn.dataset.lang === currentLang);
       });
       document.querySelectorAll('.i18n').forEach(el => {
-        const text = el.getAttribute(`data-${lang}`);
+        const text = el.getAttribute(`data-${currentLang}`);
         if (text) el.textContent = text;
       });
-      document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
+      document.documentElement.lang = currentLang === 'zh' ? 'zh-Hant' : 'en';
+      document.documentElement.classList.remove('i18n-pending');
       applyCheckoutLinks();
+    }
+
+    function setLang(lang) {
+      var choice = lang === 'en' ? 'en' : 'zh';
+      try { localStorage.setItem('lang', choice); } catch (e) {}
+      applyLang(choice);
     }
 
     // Scroll animations
@@ -1010,7 +1148,7 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    applyCheckoutLinks();
+    applyLang(window.__siteLang === 'en' ? 'en' : 'zh');
 
     // Nav scroll effect
     window.addEventListener('scroll', () => {
@@ -1026,6 +1164,16 @@
       });
     });
   </script>
+  <!--
+    Gumroad overlay. Deferred so it runs after applyCheckoutLinks().
+    A later Content-Security-Policy must allow:
+      script-src https://gumroad.com https://assets.gumroad.com
+      style-src https://assets.gumroad.com
+      font-src https://assets.gumroad.com
+      frame-src https://gumroad.com https://*.gumroad.com
+    Without the script, these links still open the same Gumroad URLs in this tab.
+  -->
+  <script src="https://gumroad.com/js/gumroad.js" defer></script>
 
 </body>
 </html>
