@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>也許妳想找人聊一聊 | Maybe She'd Like to Talk</title>
-  <meta name="description" content="為孕期媽咪設計的心靈陪伴平台。40週 Inner Engineering 冥想練習 + 1:1 預約聊聊。">
+  <meta name="description" content="為孕期媽咪設計的完整 40 週互動旅程。每週情緒陪伴指南，加上呼吸與冥想練習。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -222,26 +222,6 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(242,139,110,0.45);
     }
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--white);
-      color: var(--coral);
-      border: 2px solid var(--coral);
-      padding: 14px 32px;
-      border-radius: 60px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-family: inherit;
-    }
-    .btn-secondary:hover {
-      background: var(--pink-soft);
-      border-color: #E07A5F;
-    }
     .btn-group {
       display: flex;
       gap: 16px;
@@ -392,44 +372,44 @@
       font-weight: 500;
     }
 
-    /* ===== BOOKING ===== */
-    .booking {
+    /* ===== FULL JOURNEY ===== */
+    .full-journey {
       background: var(--white);
       text-align: center;
     }
-    .booking-card {
+    .journey-package {
       max-width: 720px;
       margin: 0 auto;
       background: linear-gradient(135deg, var(--pink-soft) 0%, var(--coral-soft) 100%);
       border-radius: var(--radius-xl);
       padding: 60px 48px;
     }
-    .booking-card h3 {
+    .journey-package h3 {
       font-size: 28px;
       font-weight: 700;
       margin-bottom: 16px;
     }
-    .booking-card p {
+    .journey-package p {
       font-size: 16px;
       color: var(--warm-mid);
       margin-bottom: 32px;
       line-height: 1.8;
     }
-    .booking-features {
+    .package-features {
       display: flex;
       justify-content: center;
       gap: 40px;
       margin-bottom: 36px;
       flex-wrap: wrap;
     }
-    .booking-feature {
+    .package-feature {
       display: flex;
       align-items: center;
       gap: 10px;
       font-size: 15px;
       color: var(--warm-mid);
     }
-    .booking-feature .check {
+    .package-feature .check {
       width: 24px;
       height: 24px;
       background: var(--coral-light);
@@ -439,19 +419,15 @@
       justify-content: center;
       flex-shrink: 0;
     }
-    .booking-feature .check svg {
+    .package-feature .check svg {
       width: 14px;
       height: 14px;
     }
-    .free-badge {
-      display: inline-block;
-      background: var(--coral-light);
-      color: var(--white);
-      padding: 6px 20px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 24px;
+    .journey-package .btn-primary {
+      max-width: 100%;
+      line-height: 1.5;
+      white-space: normal;
+      text-align: center;
     }
 
     /* ===== FOOTER ===== */
@@ -529,8 +505,8 @@
         grid-template-columns: 1fr;
         padding: 28px;
       }
-      .booking-card { padding: 36px 24px; }
-      .booking-features { gap: 16px; }
+      .journey-package { padding: 36px 24px; }
+      .package-features { gap: 16px; }
       .lang-toggle { top: 16px; right: 16px; }
     }
 
@@ -562,7 +538,7 @@
     <ul class="nav-links">
       <li><a href="#about" data-zh="關於我們" data-en="About" class="i18n">關於我們</a></li>
       <li><a href="#journey" data-zh="40 週旅程" data-en="40-Week Journey" class="i18n">40 週旅程</a></li>
-      <li><a href="#booking" data-zh="預約聊聊" data-en="Book a Session" class="i18n">預約聊聊</a></li>
+      <li><a href="#full-journey" data-zh="完整 40 週旅程" data-en="Full Journey" class="i18n">完整 40 週旅程</a></li>
     </ul>
   </nav>
 
@@ -571,16 +547,15 @@
     <div class="hero-content">
       <div class="hero-badge">
         <span>🤰</span>
-        <span data-zh="為孕期的妳而設計" data-en="Designed for expecting mothers" class="i18n">為孕期的妳而設計</span>
+        <span data-zh="40 週互動旅程" data-en="A 40-week interactive journey" class="i18n">40 週互動旅程</span>
       </div>
       <h1>
         <span data-zh="也許妳想" data-en="Maybe She'd" class="i18n">也許妳想</span><br>
-        <span class="accent" data-zh="找人聊一聊" data-en="Like to Talk" class="i18n">找人聊一聊</span>
+        <span class="accent i18n" data-zh="找人聊一聊" data-en="Like to Talk">找人聊一聊</span>
       </h1>
-      <p data-zh="懷孕的路上，妳不需要獨自面對。這裡有 40 週的陪伴指南、呼吸冥想練習，還有真正懂妳的人，陪妳聊 45 分鐘。" data-en="You don't have to walk this journey alone. 40 weeks of guided support, breathing & meditation practices, and someone who truly understands — ready to talk for 45 minutes." class="i18n">懷孕的路上，妳不需要獨自面對。這裡有 40 週的陪伴指南、呼吸冥想練習，還有真正懂妳的人，陪妳聊 45 分鐘。</p>
+      <p data-zh="懷孕的路上，妳不需要獨自面對。這裡是完整的 40 週互動旅程：每週的情緒陪伴指南，以及陪妳安定下來的呼吸與冥想練習。" data-en="You don't have to walk this journey alone. A complete 40-week interactive journey — a weekly emotional guide, plus breathing and meditation practices to help you feel steady." class="i18n">懷孕的路上，妳不需要獨自面對。這裡是完整的 40 週互動旅程：每週的情緒陪伴指南，以及陪妳安定下來的呼吸與冥想練習。</p>
       <div class="btn-group">
-        <a href="#journey" class="btn-primary" data-zh="開始 40 週旅程" data-en="Start Your Journey" class="i18n">開始 40 週旅程</a>
-        <a href="#booking" class="btn-secondary" data-zh="預約第一次聊聊（免費）" data-en="Book First Session (Free)" class="i18n">預約第一次聊聊（免費）</a>
+        <a href="#journey" class="btn-primary i18n" data-zh="開始 40 週旅程" data-en="Start Your Journey">開始 40 週旅程</a>
       </div>
 
       <!-- Hero Illustration: Bold geometric pregnant figure (Buck/Headspace style) -->
@@ -621,9 +596,9 @@
   <!-- About -->
   <section class="about" id="about">
     <div class="section-header fade-in">
-      <div class="section-label" data-zh="我們提供什麼" data-en="What We Offer" class="i18n">我們提供什麼</div>
+      <div class="section-label i18n" data-zh="我們提供什麼" data-en="What We Offer">我們提供什麼</div>
       <h2 data-zh="在這裡，妳可以安心做自己" data-en="A Safe Space to Be Yourself" class="i18n">在這裡，妳可以安心做自己</h2>
-      <p data-zh="不是醫生的診間，不是親友的安慰，是一個真正理解孕期情緒的人，陪妳走過這段路。" data-en="Not a doctor's office, not well-meaning advice from family — just someone who truly understands what you're going through." class="i18n">不是醫生的診間，不是親友的安慰，是一個真正理解孕期情緒的人，陪妳走過這段路。</p>
+      <p data-zh="不是醫生的診間，不是親友的安慰，是一趟為孕期情緒設計的 40 週互動旅程，陪妳一週一週走下去。" data-en="Not a doctor's office, not well-meaning advice from family — a 40-week interactive journey for the emotions of pregnancy, walking with you week by week." class="i18n">不是醫生的診間，不是親友的安慰，是一趟為孕期情緒設計的 40 週互動旅程，陪妳一週一週走下去。</p>
     </div>
 
     <div class="about-grid">
@@ -648,28 +623,13 @@
         <p data-zh="每週針對性的練習，幫助妳放鬆身體、安定情緒、好好睡一覺。中英文語音引導。" data-en="Weekly targeted practices to help you relax, find calm, and sleep better. Available in Chinese and English." class="i18n">每週針對性的練習，幫助妳放鬆身體、安定情緒、好好睡一覺。中英文語音引導。</p>
       </div>
 
-      <div class="about-card fade-in">
-        <div class="icon">
-          <svg viewBox="0 0 40 40" fill="none">
-            <rect x="6" y="12" width="12" height="16" rx="6" fill="#F28B6E"/>
-            <rect x="22" y="12" width="12" height="16" rx="6" fill="#5BBFB5"/>
-            <path d="M18 20 L22 20" stroke="#FFB627" stroke-width="2"/>
-            <circle cx="12" cy="18" r="1.5" fill="white"/>
-            <circle cx="28" cy="18" r="1.5" fill="white"/>
-            <path d="M10 22 C10 22, 12 24, 14 22" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M26 22 C26 22, 28 24, 30 22" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3 data-zh="1:1 預約聊聊" data-en="1:1 Talk Sessions" class="i18n">1:1 預約聊聊</h3>
-        <p data-zh="45 分鐘，和經歷過孕期或具備心理諮詢專業的人，好好聊一聊。第一次免費。" data-en="45 minutes with someone who's been through pregnancy or has professional counseling experience. First session free." class="i18n">45 分鐘，和經歷過孕期或具備心理諮詢專業的人，好好聊一聊。第一次免費。</p>
-      </div>
     </div>
   </section>
 
   <!-- 40-Week Journey -->
   <section class="journey" id="journey">
     <div class="section-header fade-in">
-      <div class="section-label" data-zh="Inner Engineering" data-en="Inner Engineering" class="i18n">Inner Engineering</div>
+      <div class="section-label i18n" data-zh="Inner Engineering" data-en="Inner Engineering">Inner Engineering</div>
       <h2 data-zh="40 週，一趟向內的旅程" data-en="40 Weeks, a Journey Inward" class="i18n">40 週，一趟向內的旅程</h2>
       <p data-zh="每一週，我們都會陪妳認識當下的自己。妳不需要完美，只需要被理解。" data-en="Each week, we help you understand who you are right now. You don't need to be perfect — you just need to be heard." class="i18n">每一週，我們都會陪妳認識當下的自己。妳不需要完美，只需要被理解。</p>
     </div>
@@ -678,13 +638,13 @@
       <div class="journey-phase phase-1 fade-in">
         <div class="phase-badge">🌱</div>
         <div class="phase-content">
-          <div class="weeks" data-zh="第 1–12 週" data-en="Weeks 1–12" class="i18n">第 1–12 週</div>
+          <div class="weeks i18n" data-zh="第 1–12 週" data-en="Weeks 1–12">第 1–12 週</div>
           <h3 data-zh="播種期：與自己和解" data-en="Seed Phase: Making Peace with Yourself" class="i18n">播種期：與自己和解</h3>
           <p data-zh="不確定、害怕、期待交織的時期。我們幫妳認識初期的身心變化，學會對焦慮溫柔以待。" data-en="A time of uncertainty, fear, and anticipation intertwined. We help you navigate early changes and learn to be gentle with your anxiety." class="i18n">不確定、害怕、期待交織的時期。我們幫妳認識初期的身心變化，學會對焦慮溫柔以待。</p>
           <div class="phase-tags">
-            <span class="phase-tag" data-zh="舒緩孕吐呼吸法" data-en="Morning Sickness Breathing" class="i18n">舒緩孕吐呼吸法</span>
-            <span class="phase-tag" data-zh="焦慮安定冥想" data-en="Anxiety Calm Meditation" class="i18n">焦慮安定冥想</span>
-            <span class="phase-tag" data-zh="秘密期的情緒日記" data-en="Secret Phase Journaling" class="i18n">秘密期的情緒日記</span>
+            <span class="phase-tag i18n" data-zh="舒緩孕吐呼吸法" data-en="Morning Sickness Breathing">舒緩孕吐呼吸法</span>
+            <span class="phase-tag i18n" data-zh="焦慮安定冥想" data-en="Anxiety Calm Meditation">焦慮安定冥想</span>
+            <span class="phase-tag i18n" data-zh="秘密期的情緒日記" data-en="Secret Phase Journaling">秘密期的情緒日記</span>
           </div>
         </div>
       </div>
@@ -692,13 +652,13 @@
       <div class="journey-phase phase-2 fade-in">
         <div class="phase-badge">🌸</div>
         <div class="phase-content">
-          <div class="weeks" data-zh="第 13–27 週" data-en="Weeks 13–27" class="i18n">第 13–27 週</div>
+          <div class="weeks i18n" data-zh="第 13–27 週" data-en="Weeks 13–27">第 13–27 週</div>
           <h3 data-zh="綻放期：感受新生命" data-en="Bloom Phase: Feeling New Life" class="i18n">綻放期：感受新生命</h3>
           <p data-zh="身體明顯變化，第一次感受到胎動。我們陪妳重新認識自己的身體，與寶寶建立連結。" data-en="Your body is visibly changing, and you feel your baby move for the first time. We help you reconnect with your body and bond with your little one." class="i18n">身體明顯變化，第一次感受到胎動。我們陪妳重新認識自己的身體，與寶寶建立連結。</p>
           <div class="phase-tags">
-            <span class="phase-tag" data-zh="身體接納冥想" data-en="Body Acceptance Meditation" class="i18n">身體接納冥想</span>
-            <span class="phase-tag" data-zh="寶寶連結呼吸" data-en="Baby Bonding Breathwork" class="i18n">寶寶連結呼吸</span>
-            <span class="phase-tag" data-zh="伴侶溝通練習" data-en="Partner Communication" class="i18n">伴侶溝通練習</span>
+            <span class="phase-tag i18n" data-zh="身體接納冥想" data-en="Body Acceptance Meditation">身體接納冥想</span>
+            <span class="phase-tag i18n" data-zh="寶寶連結呼吸" data-en="Baby Bonding Breathwork">寶寶連結呼吸</span>
+            <span class="phase-tag i18n" data-zh="伴侶溝通練習" data-en="Partner Communication">伴侶溝通練習</span>
           </div>
         </div>
       </div>
@@ -706,69 +666,64 @@
       <div class="journey-phase phase-3 fade-in">
         <div class="phase-badge">🌙</div>
         <div class="phase-content">
-          <div class="weeks" data-zh="第 28–40 週" data-en="Weeks 28–40" class="i18n">第 28–40 週</div>
+          <div class="weeks i18n" data-zh="第 28–40 週" data-en="Weeks 28–40">第 28–40 週</div>
           <h3 data-zh="豐收期：準備迎接" data-en="Harvest Phase: Ready to Welcome" class="i18n">豐收期：準備迎接</h3>
           <p data-zh="倒數的緊張與期待。我們幫妳為生產做心理準備，練習放鬆，帶著安定的心迎接寶寶。" data-en="The countdown brings both excitement and nerves. We prepare your mind for birth, practice relaxation, and help you welcome your baby with calm confidence." class="i18n">倒數的緊張與期待。我們幫妳為生產做心理準備，練習放鬆，帶著安定的心迎接寶寶。</p>
           <div class="phase-tags">
-            <span class="phase-tag" data-zh="助眠深度放鬆" data-en="Deep Sleep Relaxation" class="i18n">助眠深度放鬆</span>
-            <span class="phase-tag" data-zh="生產準備冥想" data-en="Birth Preparation Meditation" class="i18n">生產準備冥想</span>
-            <span class="phase-tag" data-zh="給寶寶的第一封信" data-en="First Letter to Baby" class="i18n">給寶寶的第一封信</span>
+            <span class="phase-tag i18n" data-zh="助眠深度放鬆" data-en="Deep Sleep Relaxation">助眠深度放鬆</span>
+            <span class="phase-tag i18n" data-zh="生產準備冥想" data-en="Birth Preparation Meditation">生產準備冥想</span>
+            <span class="phase-tag i18n" data-zh="給寶寶的第一封信" data-en="First Letter to Baby">給寶寶的第一封信</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Booking -->
-  <section class="booking" id="booking">
+  <!-- Complete 40-week journey -->
+  <section class="full-journey" id="full-journey">
     <div class="section-header fade-in">
-      <div class="section-label" data-zh="預約聊聊" data-en="Book a Session" class="i18n">預約聊聊</div>
-      <h2 data-zh="妳值得被好好聆聽" data-en="You Deserve to Be Heard" class="i18n">妳值得被好好聆聽</h2>
+      <div class="section-label i18n" data-zh="完整 40 週旅程" data-en="Complete 40-Week Journey">完整 40 週旅程</div>
+      <h2 data-zh="一趟可以跟著走的互動旅程" data-en="One interactive journey you can follow" class="i18n">一趟可以跟著走的互動旅程</h2>
+      <p data-zh="每週的情緒陪伴，加上呼吸、冥想與睡眠練習，收成一套完整的 40 週旅程。" data-en="Weekly emotional guidance, plus breathing, meditation, and sleep practices — gathered into one complete 40-week journey." class="i18n">每週的情緒陪伴，加上呼吸、冥想與睡眠練習，收成一套完整的 40 週旅程。</p>
     </div>
 
-    <div class="booking-card fade-in">
-      <div class="free-badge" data-zh="第一次免費" data-en="First Session Free" class="i18n">第一次免費</div>
-      <h3 data-zh="45 分鐘 · 線上 · 一對一" data-en="45 Minutes · Online · One-on-One" class="i18n">45 分鐘 · 線上 · 一對一</h3>
-      <p data-zh="選一個妳方便的時間，我們會寄一封含有 Google Meet 連結的確認信給妳。不需要準備什麼，只要帶著妳自己來就好。" data-en="Pick a time that works for you, and we'll send a confirmation email with a Google Meet link. No preparation needed — just bring yourself." class="i18n">選一個妳方便的時間，我們會寄一封含有 Google Meet 連結的確認信給妳。不需要準備什麼，只要帶著妳自己來就好。</p>
+    <div class="journey-package fade-in">
+      <h3 data-zh="從第 1 週走到第 40 週" data-en="From week 1 through week 40" class="i18n">從第 1 週走到第 40 週</h3>
+      <p data-zh="播種、綻放、準備迎接。每一週都有認識當下身心的指南，也有可以跟著做的練習。中英文語音引導。" data-en="Seed, bloom, and the weeks before you welcome your baby. Each week includes a guide to what you're feeling, and a practice you can follow. Guidance in Chinese and English." class="i18n">播種、綻放、準備迎接。每一週都有認識當下身心的指南，也有可以跟著做的練習。中英文語音引導。</p>
 
-      <div class="booking-features">
-        <div class="booking-feature">
+      <div class="package-features">
+        <div class="package-feature">
           <div class="check">
             <svg viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <span data-zh="Google Meet 視訊" data-en="Google Meet" class="i18n">Google Meet 視訊</span>
+          <span data-zh="每週情緒陪伴" data-en="Weekly emotional guide" class="i18n">每週情緒陪伴</span>
         </div>
-        <div class="booking-feature">
+        <div class="package-feature">
           <div class="check">
             <svg viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <span data-zh="中文 / 英文" data-en="Chinese / English" class="i18n">中文 / 英文</span>
+          <span data-zh="呼吸 · 冥想 · 睡眠" data-en="Breathe · Meditate · Sleep" class="i18n">呼吸 · 冥想 · 睡眠</span>
         </div>
-        <div class="booking-feature">
+        <div class="package-feature">
           <div class="check">
             <svg viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <span data-zh="完全保密" data-en="Fully Confidential" class="i18n">完全保密</span>
+          <span data-zh="中英雙語引導" data-en="Chinese & English guidance" class="i18n">中英雙語引導</span>
         </div>
       </div>
 
-      <p style="margin-top: 16px; font-size: 13px; color: var(--warm-light);" data-zh="預約後，確認信會在 24 小時內寄到妳的信箱" data-en="After booking, you'll receive a confirmation email within 24 hours" class="i18n">預約後，確認信會在 24 小時內寄到妳的信箱</p>
-    </div>
-
-    <!-- Cal.com Inline Booking Widget -->
-    <div class="cal-embed-wrapper fade-in" style="max-width: 900px; margin: 48px auto 0; min-height: 500px; background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 30px rgba(0,0,0,0.06);">
-      <div id="my-cal-inline" style="width:100%; height:100%; overflow:scroll"></div>
+      <a href="mailto:hello@maybeshedliketotalk.org" class="btn-primary i18n" data-zh="想第一時間拿到完整 40 週旅程？寫信給我們" data-en="Want to be first to get the complete 40-week journey? Write to us">想第一時間拿到完整 40 週旅程？寫信給我們</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="footer-logo" data-zh="也許妳想找人聊一聊" data-en="Maybe She'd Like to Talk" class="i18n">也許妳想找人聊一聊</div>
+    <div class="footer-logo i18n" data-zh="也許妳想找人聊一聊" data-en="Maybe She'd Like to Talk">也許妳想找人聊一聊</div>
     <p data-zh="每一位媽媽都值得被好好照顧。不只是身體，還有心。" data-en="Every mother deserves to be cared for. Not just her body, but her heart." class="i18n">每一位媽媽都值得被好好照顧。不只是身體，還有心。</p>
     <div class="footer-links">
       <a href="#about" data-zh="關於我們" data-en="About" class="i18n">關於我們</a>
       <a href="#journey" data-zh="40 週旅程" data-en="Journey" class="i18n">40 週旅程</a>
-      <a href="#booking" data-zh="預約聊聊" data-en="Book" class="i18n">預約聊聊</a>
+      <a href="#full-journey" data-zh="完整 40 週旅程" data-en="Full Journey" class="i18n">完整 40 週旅程</a>
       <a href="mailto:hello@maybeshedliketotalk.org" data-zh="聯絡我們" data-en="Contact" class="i18n">聯絡我們</a>
     </div>
     <div class="footer-contact">聯絡我們 Contact: <a href="mailto:hello@maybeshedliketotalk.org">hello@maybeshedliketotalk.org</a></div>
@@ -812,59 +767,6 @@
         const target = document.querySelector(this.getAttribute('href'));
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
-    });
-  </script>
-
-  <!-- Cal.com Embed Script -->
-  <!--
-    ==========================================
-    Annie 設定步驟：
-    1. 到 https://cal.com 免費註冊帳號
-    2. 建立一個 45 分鐘的 Event Type（例如 "聊聊 / Talk Session"）
-    3. 在 Event Type 設定裡連結你的 Zoom 帳號（Integrations > Zoom）
-    4. 把下面的 calLink 改成你的：例如 "annie/talk-session"
-    5. 第一次免費可以用 Cal.com 的 "Payment" 功能（設價格為 0）或不設
-    ==========================================
-  -->
-  <script type="text/javascript">
-    (function (C, A, L) {
-      let p = function (a, ar) { a.q.push(ar); };
-      let d = C.document;
-      C.Cal = C.Cal || function () {
-        let cal = C.Cal;
-        let ar = arguments;
-        if (!cal.loaded) {
-          cal.ns = {};
-          cal.q = cal.q || [];
-          d.head.appendChild(d.createElement("script")).src = A;
-          cal.loaded = true;
-        }
-        if (ar[0] === L) {
-          const api = function () { p(api, arguments); };
-          const namespace = ar[1];
-          api.q = api.q || [];
-          typeof namespace === "string"
-            ? (cal.ns[namespace] = api) && p(api, ar)
-            : p(cal, ar);
-          return;
-        }
-        p(cal, ar);
-      };
-    })(window, "https://app.cal.com/embed/embed.js", "init");
-
-    Cal("init", { origin: "https://cal.com" });
-
-    // TODO: 把 "YOUR_USERNAME/YOUR_EVENT" 改成你的 Cal.com 連結
-    Cal("inline", {
-      elementOrSelector: "#my-cal-inline",
-      calLink: "mugo-28yktd/maybe-she-d-like-to-talk",
-      layout: "month_view"
-    });
-
-    Cal("ui", {
-      styles: { branding: { brandColor: "#F28B6E" } },
-      hideEventTypeDetails: false,
-      layout: "month_view"
     });
   </script>
 
