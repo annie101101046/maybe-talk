@@ -222,6 +222,26 @@
       transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(242,139,110,0.45);
     }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      color: var(--coral);
+      border: 2px solid var(--coral);
+      padding: 14px 32px;
+      border-radius: 60px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-family: inherit;
+    }
+    .btn-secondary:hover {
+      background: var(--pink-soft);
+      border-color: #E07A5F;
+    }
     .btn-group {
       display: flex;
       gap: 16px;
@@ -372,62 +392,177 @@
       font-weight: 500;
     }
 
-    /* ===== FULL JOURNEY ===== */
-    .full-journey {
+    /* ===== PRICING ===== */
+    .pricing {
       background: var(--white);
-      text-align: center;
     }
-    .journey-package {
-      max-width: 720px;
+    #pricing,
+    #journey,
+    #about {
+      scroll-margin-top: 88px;
+    }
+    .pricing .section-header .btn-secondary {
+      margin-top: 8px;
+    }
+    .pricing-grid {
+      max-width: 1080px;
       margin: 0 auto;
-      background: linear-gradient(135deg, var(--pink-soft) 0%, var(--coral-soft) 100%);
-      border-radius: var(--radius-xl);
-      padding: 60px 48px;
+      padding-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: stretch;
     }
-    .journey-package h3 {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-    .journey-package p {
-      font-size: 16px;
-      color: var(--warm-mid);
-      margin-bottom: 32px;
-      line-height: 1.8;
-    }
-    .package-features {
+    .price-card {
+      background: var(--cream);
+      border: 2px solid transparent;
+      border-radius: var(--radius-lg);
+      padding: 32px 26px 28px;
       display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin-bottom: 36px;
+      flex-direction: column;
+      position: relative;
+    }
+    .price-card.popular {
+      background: var(--white);
+      border-color: var(--coral);
+      box-shadow: 0 16px 40px rgba(242,139,110,0.18);
+      transform: translateY(-10px);
+    }
+    .price-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--coral);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .price-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .price-card .price-desc {
+      font-size: 14px;
+      color: var(--warm-mid);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      min-height: 4.8em;
+    }
+    .week-choices {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: -4px 0 16px;
+    }
+    .price-block {
+      margin-bottom: 8px;
+    }
+    .price-was {
+      color: var(--warm-light);
+      text-decoration: line-through;
+      font-size: 14px;
+      min-height: 1.4em;
+      margin-bottom: 4px;
+    }
+    .early-pill {
+      display: inline-block;
+      background: var(--yellow-soft);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 6px;
+    }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
       flex-wrap: wrap;
     }
-    .package-feature {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .price-amount {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--navy);
+      line-height: 1.1;
+    }
+    .price-usd {
       font-size: 15px;
       color: var(--warm-mid);
+      font-weight: 600;
     }
-    .package-feature .check {
-      width: 24px;
-      height: 24px;
-      background: var(--coral-light);
+    .price-features {
+      list-style: none;
+      margin: 18px 0 24px;
+      padding: 0;
+      flex: 1;
+    }
+    .price-features li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: var(--warm-mid);
+      line-height: 1.55;
+    }
+    .price-features li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
+      background: var(--teal);
+    }
+    .price-card.popular .price-features li::before {
+      background: var(--coral);
+    }
+    .price-card .btn-primary {
+      width: 100%;
       justify-content: center;
-      flex-shrink: 0;
-    }
-    .package-feature .check svg {
-      width: 14px;
-      height: 14px;
-    }
-    .journey-package .btn-primary {
-      max-width: 100%;
-      line-height: 1.5;
+      margin-top: auto;
       white-space: normal;
       text-align: center;
+      line-height: 1.4;
+    }
+    .pricing-note {
+      max-width: 640px;
+      margin: 28px auto 0;
+      text-align: center;
+      font-size: 14px;
+      color: var(--warm-mid);
+    }
+    .faq {
+      max-width: 760px;
+      margin: 64px auto 0;
+    }
+    .faq h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+    .faq-item {
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 22px 26px;
+      margin-bottom: 12px;
+    }
+    .faq-item h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .faq-item p {
+      font-size: 15px;
+      color: var(--warm-mid);
+      line-height: 1.7;
     }
 
     /* ===== FOOTER ===== */
@@ -505,9 +640,15 @@
         grid-template-columns: 1fr;
         padding: 28px;
       }
-      .journey-package { padding: 36px 24px; }
-      .package-features { gap: 16px; }
+      .pricing-grid { grid-template-columns: 1fr; max-width: 460px; }
+      .price-card.popular { transform: none; }
+      .price-card .price-desc { min-height: 0; }
       .lang-toggle { top: 16px; right: 16px; }
+    }
+    @media (max-width: 960px) {
+      .pricing-grid { grid-template-columns: 1fr; max-width: 460px; margin-left: auto; margin-right: auto; }
+      .price-card.popular { order: -1; transform: none; }
+      .price-card .price-desc { min-height: 0; }
     }
 
     /* ===== ANIMATIONS ===== */
@@ -538,7 +679,7 @@
     <ul class="nav-links">
       <li><a href="#about" data-zh="關於我們" data-en="About" class="i18n">關於我們</a></li>
       <li><a href="#journey" data-zh="40 週旅程" data-en="40-Week Journey" class="i18n">40 週旅程</a></li>
-      <li><a href="#full-journey" data-zh="完整 40 週旅程" data-en="Full Journey" class="i18n">完整 40 週旅程</a></li>
+      <li><a href="#pricing" data-zh="價格" data-en="Pricing" class="i18n">價格</a></li>
     </ul>
   </nav>
 
@@ -556,6 +697,7 @@
       <p data-zh="懷孕的路上，妳不需要獨自面對。這裡是完整的 40 週互動旅程：每週的情緒陪伴指南，以及陪妳安定下來的呼吸與冥想練習。" data-en="You don't have to walk this journey alone. A complete 40-week interactive journey — a weekly emotional guide, plus breathing and meditation practices to help you feel steady." class="i18n">懷孕的路上，妳不需要獨自面對。這裡是完整的 40 週互動旅程：每週的情緒陪伴指南，以及陪妳安定下來的呼吸與冥想練習。</p>
       <div class="btn-group">
         <a href="#journey" class="btn-primary i18n" data-zh="開始 40 週旅程" data-en="Start Your Journey">開始 40 週旅程</a>
+        <a href="#pricing" class="btn-secondary i18n" data-zh="查看價格" data-en="See Pricing">查看價格</a>
       </div>
 
       <!-- Hero Illustration: Bold geometric pregnant figure (Buck/Headspace style) -->
@@ -679,40 +821,99 @@
     </div>
   </section>
 
-  <!-- Complete 40-week journey -->
-  <section class="full-journey" id="full-journey">
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
     <div class="section-header fade-in">
-      <div class="section-label i18n" data-zh="完整 40 週旅程" data-en="Complete 40-Week Journey">完整 40 週旅程</div>
-      <h2 data-zh="一趟可以跟著走的互動旅程" data-en="One interactive journey you can follow" class="i18n">一趟可以跟著走的互動旅程</h2>
-      <p data-zh="每週的情緒陪伴，加上呼吸、冥想與睡眠練習，收成一套完整的 40 週旅程。" data-en="Weekly emotional guidance, plus breathing, meditation, and sleep practices — gathered into one complete 40-week journey." class="i18n">每週的情緒陪伴，加上呼吸、冥想與睡眠練習，收成一套完整的 40 週旅程。</p>
+      <div class="section-label i18n" data-zh="價格" data-en="Pricing">價格</div>
+      <h2 data-zh="前 4 週免費，其餘現在預購" data-en="The first 4 weeks are free. Pre-order the rest." class="i18n">前 4 週免費，其餘現在預購</h2>
+      <p data-zh="第 1–4 週免費體驗。內容每週釋出，完整內容會分批上線，所以現在是預購。" data-en="Weeks 1–4 are free to try. Content is released weekly, and the full journey rolls out in batches — so this is an early-bird pre-sale." class="i18n">第 1–4 週免費體驗。內容每週釋出，完整內容會分批上線，所以現在是預購。</p>
+      <a href="#journey" class="btn-secondary i18n" data-zh="免費開始前 4 週" data-en="Start weeks 1–4 free">免費開始前 4 週</a>
     </div>
 
-    <div class="journey-package fade-in">
-      <h3 data-zh="從第 1 週走到第 40 週" data-en="From week 1 through week 40" class="i18n">從第 1 週走到第 40 週</h3>
-      <p data-zh="播種、綻放、準備迎接。每一週都有認識當下身心的指南，也有可以跟著做的練習。中英文語音引導。" data-en="Seed, bloom, and the weeks before you welcome your baby. Each week includes a guide to what you're feeling, and a practice you can follow. Guidance in Chinese and English." class="i18n">播種、綻放、準備迎接。每一週都有認識當下身心的指南，也有可以跟著做的練習。中英文語音引導。</p>
+    <div class="pricing-grid">
+      <article class="price-card fade-in">
+        <h3 data-zh="單一孕期" data-en="Single Trimester" class="i18n">單一孕期</h3>
+        <p class="price-desc i18n" data-zh="適合孕期中途才加入。選一段週數，跟著那一段走。" data-en="For joining mid-pregnancy. Pick one set of weeks and follow that stretch.">適合孕期中途才加入。選一段週數，跟著那一段走。</p>
+        <div class="week-choices">
+          <span class="phase-tag i18n" data-zh="第 1–12 週" data-en="Weeks 1–12">第 1–12 週</span>
+          <span class="phase-tag i18n" data-zh="第 13–27 週" data-en="Weeks 13–27">第 13–27 週</span>
+          <span class="phase-tag i18n" data-zh="第 28–40 週" data-en="Weeks 28–40">第 28–40 週</span>
+        </div>
+        <div class="price-block">
+          <div class="price-was"></div>
+          <div class="price-row">
+            <span class="price-amount">NT$490</span>
+            <span class="price-usd">US$15</span>
+          </div>
+        </div>
+        <ul class="price-features">
+          <li data-zh="自選第 1–12、13–27 或 28–40 週" data-en="Choose weeks 1–12, 13–27, or 28–40" class="i18n">自選第 1–12、13–27 或 28–40 週</li>
+          <li data-zh="該段的每週情緒陪伴" data-en="Weekly emotional guide for those weeks" class="i18n">該段的每週情緒陪伴</li>
+          <li data-zh="該段的呼吸與冥想練習" data-en="Breathing and meditation for those weeks" class="i18n">該段的呼吸與冥想練習</li>
+        </ul>
+        <a class="btn-primary i18n" data-plan="single" href="mailto:hello@maybeshedliketotalk.org" data-zh="預購單一孕期" data-en="Pre-order this trimester">預購單一孕期</a>
+      </article>
 
-      <div class="package-features">
-        <div class="package-feature">
-          <div class="check">
-            <svg viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <article class="price-card popular fade-in">
+        <div class="price-badge i18n" data-zh="最受歡迎" data-en="Most popular">最受歡迎</div>
+        <h3 data-zh="全孕期通行證" data-en="Full Pregnancy Pass" class="i18n">全孕期通行證</h3>
+        <p class="price-desc i18n" data-zh="全部 40 週的情緒陪伴，加上中英文呼吸與冥想語音。" data-en="All 40 weeks of emotional guidance, plus breathing and meditation audio in Chinese and English.">全部 40 週的情緒陪伴，加上中英文呼吸與冥想語音。</p>
+        <div class="price-block">
+          <div class="price-was">NT$1,280（US$39）</div>
+          <div class="early-pill i18n" data-zh="早鳥價" data-en="Early bird">早鳥價</div>
+          <div class="price-row">
+            <span class="price-amount">NT$990</span>
+            <span class="price-usd">US$32</span>
           </div>
-          <span data-zh="每週情緒陪伴" data-en="Weekly emotional guide" class="i18n">每週情緒陪伴</span>
         </div>
-        <div class="package-feature">
-          <div class="check">
-            <svg viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <ul class="price-features">
+          <li data-zh="全部 40 週的情緒陪伴" data-en="All 40 weeks of emotional guidance" class="i18n">全部 40 週的情緒陪伴</li>
+          <li data-zh="呼吸與冥想語音，中文與英文" data-en="Breathing and meditation audio, in Chinese and English" class="i18n">呼吸與冥想語音，中文與英文</li>
+          <li data-zh="每週釋出新的一週" data-en="A new week released each week" class="i18n">每週釋出新的一週</li>
+          <li data-zh="一次買斷，永久使用" data-en="One-time purchase, lifetime access" class="i18n">一次買斷，永久使用</li>
+        </ul>
+        <a class="btn-primary i18n" data-plan="full" href="mailto:hello@maybeshedliketotalk.org" data-zh="以早鳥價預購" data-en="Pre-order at the early-bird price">以早鳥價預購</a>
+      </article>
+
+      <article class="price-card fade-in">
+        <h3 data-zh="送禮版" data-en="Gift Edition" class="i18n">送禮版</h3>
+        <p class="price-desc i18n" data-zh="全孕期通行證，再加一份數位禮卡。送給伴侶、家人或朋友。" data-en="The Full Pregnancy Pass, plus a digital gift card. For a partner, family, or friend.">全孕期通行證，再加一份數位禮卡。送給伴侶、家人或朋友。</p>
+        <div class="price-block">
+          <div class="price-was"></div>
+          <div class="price-row">
+            <span class="price-amount">NT$1,480</span>
+            <span class="price-usd">US$45</span>
           </div>
-          <span data-zh="呼吸 · 冥想 · 睡眠" data-en="Breathe · Meditate · Sleep" class="i18n">呼吸 · 冥想 · 睡眠</span>
         </div>
-        <div class="package-feature">
-          <div class="check">
-            <svg viewBox="0 0 14 14" fill="none"><path d="M3 7 L6 10 L11 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <span data-zh="中英雙語引導" data-en="Chinese & English guidance" class="i18n">中英雙語引導</span>
-        </div>
+        <ul class="price-features">
+          <li data-zh="含完整的全孕期通行證" data-en="Includes the Full Pregnancy Pass" class="i18n">含完整的全孕期通行證</li>
+          <li data-zh="加一份數位禮卡，可以轉贈" data-en="Plus a digital gift card to pass on" class="i18n">加一份數位禮卡，可以轉贈</li>
+          <li data-zh="適合送給正在孕期的人" data-en="For someone who is pregnant" class="i18n">適合送給正在孕期的人</li>
+        </ul>
+        <a class="btn-primary i18n" data-plan="gift" href="mailto:hello@maybeshedliketotalk.org" data-zh="預購送禮版" data-en="Pre-order the gift edition">預購送禮版</a>
+      </article>
+    </div>
+
+    <p class="pricing-note i18n" data-zh="比整個孕期按月訂閱更划算。" data-en="A better value than paying monthly across a whole pregnancy.">比整個孕期按月訂閱更划算。</p>
+
+    <div class="faq fade-in">
+      <h2 data-zh="常見問題" data-en="Common questions" class="i18n">常見問題</h2>
+      <div class="faq-item">
+        <h3 data-zh="內容什麼時候會釋出？" data-en="When is the content released?" class="i18n">內容什麼時候會釋出？</h3>
+        <p data-zh="每週釋出一週。完整的 40 週會分批上線，所以現在是預購。第 1–4 週可以先免費開始。" data-en="One week is released each week. The full 40 weeks roll out in batches, which is why this is a pre-sale. You can start weeks 1–4 for free." class="i18n">每週釋出一週。完整的 40 週會分批上線，所以現在是預購。第 1–4 週可以先免費開始。</p>
       </div>
-
-      <a href="mailto:hello@maybeshedliketotalk.org" class="btn-primary i18n" data-zh="想第一時間拿到完整 40 週旅程？寫信給我們" data-en="Want to be first to get the complete 40-week journey? Write to us">想第一時間拿到完整 40 週旅程？寫信給我們</a>
+      <div class="faq-item">
+        <h3 data-zh="孕期中途才加入，可以嗎？" data-en="Can I join mid-pregnancy?" class="i18n">孕期中途才加入，可以嗎？</h3>
+        <p data-zh="可以。單一孕期讓妳自選第 1–12、13–27 或 28–40 週。若想一次走完，選全孕期通行證。" data-en="Yes. Single Trimester lets you choose weeks 1–12, 13–27, or 28–40. If you want every week, choose the Full Pregnancy Pass." class="i18n">可以。單一孕期讓妳自選第 1–12、13–27 或 28–40 週。若想一次走完，選全孕期通行證。</p>
+      </div>
+      <div class="faq-item">
+        <h3 data-zh="買了可以一直使用嗎？" data-en="Is access lifetime?" class="i18n">買了可以一直使用嗎？</h3>
+        <p data-zh="全孕期通行證是一次買斷、永久使用。送禮版包含同一張通行證。單一孕期則是妳所選的那一段週數。" data-en="The Full Pregnancy Pass is a one-time purchase with lifetime access. The Gift Edition includes that same pass. Single Trimester covers the week range you choose." class="i18n">全孕期通行證是一次買斷、永久使用。送禮版包含同一張通行證。單一孕期則是妳所選的那一段週數。</p>
+      </div>
+      <div class="faq-item">
+        <h3 data-zh="要怎麼付款？" data-en="How do I pay?" class="i18n">要怎麼付款？</h3>
+        <p data-zh="線上結帳還沒有開放。點方案按鈕會寫信到 hello@maybeshedliketotalk.org，留下姓名和預產期，我們會回信跟妳完成預購。" data-en="Online checkout is not open yet. A plan button emails hello@maybeshedliketotalk.org. Leave your name and due date, and we will write back to finish the pre-order." class="i18n">線上結帳還沒有開放。點方案按鈕會寫信到 hello@maybeshedliketotalk.org，留下姓名和預產期，我們會回信跟妳完成預購。</p>
+      </div>
     </div>
   </section>
 
@@ -723,7 +924,7 @@
     <div class="footer-links">
       <a href="#about" data-zh="關於我們" data-en="About" class="i18n">關於我們</a>
       <a href="#journey" data-zh="40 週旅程" data-en="Journey" class="i18n">40 週旅程</a>
-      <a href="#full-journey" data-zh="完整 40 週旅程" data-en="Full Journey" class="i18n">完整 40 週旅程</a>
+      <a href="#pricing" data-zh="價格" data-en="Pricing" class="i18n">價格</a>
       <a href="mailto:hello@maybeshedliketotalk.org" data-zh="聯絡我們" data-en="Contact" class="i18n">聯絡我們</a>
     </div>
     <div class="footer-contact">聯絡我們 Contact: <a href="mailto:hello@maybeshedliketotalk.org">hello@maybeshedliketotalk.org</a></div>
@@ -733,6 +934,60 @@
   <script>
     // Language switching
     let currentLang = 'zh';
+
+    // Point a plan at checkout later by setting its url. Empty url keeps the mailto.
+    const CHECKOUT_EMAIL = "hello@maybeshedliketotalk.org";
+    const CHECKOUT = {
+      single: {
+        url: "",
+        zh: {
+          subject: "預購：單一孕期 NT$490",
+          body: "你好，我想預購「單一孕期」（NT$490 / US$15）。\n\n姓名：\n預產期：\n想走的週數（1–12 / 13–27 / 28–40）：\n"
+        },
+        en: {
+          subject: "Pre-order: Single Trimester NT$490 (US$15)",
+          body: "Hi, I'd like to pre-order Single Trimester (NT$490 / US$15).\n\nName:\nDue date:\nWeeks I'd like (1–12 / 13–27 / 28–40):\n"
+        }
+      },
+      full: {
+        url: "",
+        zh: {
+          subject: "預購：全孕期通行證 NT$990",
+          body: "你好，我想預購「全孕期通行證」（早鳥 NT$990 / US$32）。\n\n姓名：\n預產期：\n"
+        },
+        en: {
+          subject: "Pre-order: Full Pregnancy Pass NT$990 (US$32)",
+          body: "Hi, I'd like to pre-order the Full Pregnancy Pass (early bird NT$990 / US$32).\n\nName:\nDue date:\n"
+        }
+      },
+      gift: {
+        url: "",
+        zh: {
+          subject: "預購：送禮版 NT$1,480",
+          body: "你好，我想預購「送禮版」（NT$1,480 / US$45）。\n\n姓名：\n預產期：\n"
+        },
+        en: {
+          subject: "Pre-order: Gift Edition NT$1,480 (US$45)",
+          body: "Hi, I'd like to pre-order the Gift Edition (NT$1,480 / US$45).\n\nName:\nDue date:\n"
+        }
+      }
+    };
+
+    function checkoutHref(plan, lang) {
+      const item = CHECKOUT[plan];
+      if (!item) return "mailto:" + CHECKOUT_EMAIL;
+      if (item.url) return item.url;
+      const copy = item[lang] || item.zh;
+      const params = new URLSearchParams({ subject: copy.subject, body: copy.body });
+      return "mailto:" + CHECKOUT_EMAIL + "?" + params.toString();
+    }
+
+    function applyCheckoutLinks() {
+      document.querySelectorAll("[data-plan]").forEach(el => {
+        el.href = checkoutHref(el.dataset.plan, currentLang);
+      });
+    }
+
     function setLang(lang) {
       currentLang = lang;
       document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -743,6 +998,7 @@
         if (text) el.textContent = text;
       });
       document.documentElement.lang = lang === 'zh' ? 'zh-Hant' : 'en';
+      applyCheckoutLinks();
     }
 
     // Scroll animations
@@ -754,6 +1010,8 @@
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    applyCheckoutLinks();
 
     // Nav scroll effect
     window.addEventListener('scroll', () => {
